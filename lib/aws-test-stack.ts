@@ -12,7 +12,7 @@ export class AwsTestStack extends cdk.Stack {
     const honoFunction = new lambda.NodejsFunction(this, 'HonoHandler', {
       entry: 'src/index.ts', // プロジェクトルートからのパス
       handler: 'handler',
-      runtime: cdk.aws_lambda.Runtime.NODEJS_20_X,
+      runtime: cdk.aws_lambda.Runtime.NODEJS_24_X,
     });
 
     // 2. API Gateway (HTTP API) を作成
